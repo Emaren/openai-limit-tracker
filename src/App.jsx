@@ -151,7 +151,7 @@ function App() {
           return (
             <div key={model.id} className="p-4 shadow rounded-lg bg-gray-100">
               <h2 className="font-bold text-xl">{model.id}</h2>
-              <p className="text-sm">Owned by: {model.owned_by}</p>
+              <p className="text-sm">POwned by: {model.owned_by}</p>
               <p className="text-sm">
                 Created: {new Date(model.created * 1000).toLocaleDateString()}
               </p>
