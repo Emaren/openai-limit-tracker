@@ -1,0 +1,1 @@
+if('serviceWorker' in navigator) {window.addEventListener('load', () => {navigator.serviceWorker.register('/openai-limit-tracker/sw.js', { scope: '/openai-limit-tracker/' })})}
