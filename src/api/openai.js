@@ -1,6 +1,6 @@
 export const fetchModels = async () => {
   try {
-    const response = await fetch("/api/models", { method: "GET" });
+    const response = await fetch(`${import.meta.env.VITE_BACKEND_URL}/api/models`);
 
     if (!response.ok) {
       throw new Error(`HTTP ${response.status} - ${response.statusText}`);
