@@ -6,16 +6,16 @@ dotenv.config();
 
 export default defineConfig({
   plugins: [react()],
-  base: "/openai-limit-tracker/", // Set this to match the GitHub Pages repository name
-  define: {
-    "process.env": process.env,
-  },
-  build: {
-    outDir: "dist",
-    sourcemap: true,
-  },
+  base: "/openai-limit-tracker/", // GitHub Pages deployment
   server: {
     port: 3000,
     open: true,
+    proxy: {
+      "/api": "http://localhost:5000", // Redirect API requests to backend
+    },
+  },
+  build: {
+    outDir: "dist",
+    sourcemap: false, // Hide source maps for security
   },
 });
